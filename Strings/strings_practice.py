@@ -32,6 +32,21 @@ def showDuplicateChars2(string):
 # 4. How do you find all the permutations of a string?
 # 5. How can a given string be reversed using recursion?
 # 6. How do you check if a string contains only digits?
+def onlyDigits(string):
+    i = True
+    digits = []
+    while i == True: 
+        for char in string: 
+            if not char.isdigit():
+                i = False
+                return False
+            elif char.isdigit(): 
+                digits.append(char)
+        i = False
+    if len(digits) > 0: 
+        return True
+
+
 # 7. How do you count a number of vowels and consonants in a given string?
 # 8. How do you convert a given String into int like the atoi()?
 # 9. How do you check if a given string is a palindrome?
@@ -148,5 +163,7 @@ def findMaxDiffInTimes(times):
 
 showDuplicateChars1("programming")
 showDuplicateChars2("banana")
+print(onlyDigits("hello22world"))
+print(onlyDigits("839385235"))
 # times = ["01:30", "24:00", "06:29", "14:09"]
 # findMaxDiffInTimes(times)
